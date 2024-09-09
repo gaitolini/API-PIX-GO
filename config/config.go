@@ -40,6 +40,11 @@ func GetBBApiURL() string {
 	return os.Getenv("BB_API_URL")
 }
 
+// Função para obter o developer_application_key do Banco do Brasil
+func GetBradescoApplicationKey() string {
+	return os.Getenv("BRADESCO_APPLICATION_KEY")
+}
+
 // Função para obter o client_id do Bradesco
 func GetBradescoClientID() string {
 	return os.Getenv("BRADESCO_CLIENT_ID")
