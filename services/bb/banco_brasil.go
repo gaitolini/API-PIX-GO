@@ -22,7 +22,20 @@ func (b *BBService) CreatePix(amount string, txid string, chavePix string) (stri
 		ClientID:     config.GetBBClientID(),
 		ClientSecret: config.GetBBClientSecret(),
 		TokenURL:     config.GetBBTokenURL(),
-		Scopes:       []string{}, // Adicione escopos necessários se houver
+		Scopes: []string{
+			"cob.write",
+			"cob.read",
+			"cobv.write",
+			"cobv.read",
+			"lotecobv.write",
+			"lotecobv.read",
+			"pix.write",
+			"pix.read",
+			"webhook.read",
+			"webhook.write",
+			"payloadlocation.write",
+			"payloadlocation.read",
+		},
 	}
 
 	// Obter o token OAuth2
