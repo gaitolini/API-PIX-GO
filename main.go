@@ -23,3 +23,5 @@ func main() {
 	log.Printf("Servidor rodando na porta %s", port)
 	log.Fatal(http.ListenAndServe(":"+port, r))
 }
+
+// Simulação de mudança para testar o CI/CD - Anderson Gaitolini
