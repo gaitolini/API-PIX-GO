@@ -1,6 +1,5 @@
 name: Go CI/CD Pipeline
 
-# O pipeline será disparado em push ou pull request nos branches main e dev
 on:
   push:
     branches:
@@ -11,31 +10,25 @@ on:
       - main
       - dev
 
-# Define os jobs (tarefas) que o pipeline irá realizar
 jobs:
   build:
     runs-on: ubuntu-latest
 
     steps:
-    # Passo 1: Checkout do código fonte do repositório
     - name: Checkout code
       uses: actions/checkout@v3
 
-    # Passo 2: Instalar o Go
     - name: Set up Go
       uses: actions/setup-go@v4
       with:
         go-version: '1.21'
 
-    # Passo 3: Instalar dependências da aplicação
     - name: Install dependencies
       run: go mod tidy
 
-    # Passo 4: Rodar testes
     - name: Run tests
       run: go test ./...
 
-    # Passo 5: Fazer o build da aplicação
     - name: Build application
       run: go build -v ./...
 
@@ -47,16 +40,7 @@ jobs:
     - name: Checkout code
       uses: actions/checkout@v3
 
-    - name: Deploy to Server via SSH
-      uses: appleboy/ssh-action@v0.1.5
-      with:
-        host: ${{ secrets.SERVER_HOST }}
-        username: ${{ secrets.SERVER_USER }}
-        key: ${{ secrets.SERVER_SSH_KEY }}
-        passphrase: ${{ secrets.SERVER_SSH_PASSPHRASE }}
-        script: |
-          cd /github/meu_repo/API-PIX-GO
-          git pull origin main
-          go build -o api-pix-go main.go
-          sudo systemctl restart api-pix-go
-      
+    # Enviar requisição para o Webhook
+    - name: Deploy via Webhook
+      run: |
+        curl -X POST https://hook.gaitolini.com.br/deploy
