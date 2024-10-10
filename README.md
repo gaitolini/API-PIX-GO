@@ -1,4 +1,120 @@
 # API-PIX-GO 🚀
+## Middleware API PIX in GO 🐿️
+
+---
+
+Automatic deploy test via GitHub Actions
+
+---
+
+## About the Project 🚀
+
+**API-PIX-GO** is a **GoLang** application that implements an API for financial systems using charges via **PIX**. This project was developed specifically to interact with the **Banco do Brasil** (BB) system and operates both in **real** environments and the **BB Developers** **sandbox**.
+
+The main focus of this API is to facilitate the generation and management of PIX charges for companies and systems that need to integrate this payment method into their financial automation processes.
+
+## Technologies Used 🛠️
+
+This project runs in a **Debian Linux** environment using the following technologies and tools:
+
+- **GoLang**: The main language of the project, known for its efficiency and simplicity.
+- **Docker**: Used to containerize the application, ensuring it runs consistently in any environment.
+- **Cloudflare Tunnel**: Facilitates external access to the application securely without the need to open firewall ports.
+- **Proxmox**: The project runs in a virtualized environment with **Proxmox**, providing flexibility and scalability.
+- **Git**: Used for version control and continuous integration.
+- **GitHub Actions**: We implemented a **CI/CD** pipeline to automate the build and deployment process.
+
+## CI/CD Structure ⚙️
+
+The **CI/CD** pipeline for this project is configured as follows:
+
+1. **GitHub Actions**: When a change is made to the `main` branch, GitHub Actions automatically builds the application.
+2. **Webhook Deploy**: After the build, a webhook triggered via GitHub sends a request to the **Debian** server, which runs the **deploy script**.
+3. **Automatic Deploy with Docker**: The deploy script pulls the latest version of the application, builds the Docker image, and starts a new container on the server.
+4. **Cloudflare Tunnel**: The **Cloudflare Tunnel** exposes the API securely, allowing the application to be accessed externally without the need to open additional ports.
+
+### Webhook Deploy Repository 📦
+
+You can check the repository responsible for the **automated deploy** at the following link:
+
+🔗 [Deploy Webhook](https://github.com/gaitolini/deploy-web-hook)
+
+## Execution Environment 🖥️
+
+The application runs on a **VM** with **Debian Linux**, provisioned in a virtualized environment via **Proxmox**. The entire infrastructure is managed with modern tools, including:
+
+- **Docker**: To manage the application's containers.
+- **Cloudflare Tunnel**: To provide secure and efficient access to the API.
+
+## About PIX and Banco do Brasil 💳🏦
+
+This project is developed for integration with **PIX**, the instant payment system in Brazil. It implements all the functionalities for generating and managing charges using the **Banco do Brasil** API.
+
+- The **real** environment allows for the issuance of PIX charges in production for actual use.
+- The **sandbox** environment offers a controlled testing environment for development and simulation.
+
+### Integration with BB Developers
+
+The API interacts directly with **BB Developers**, a platform provided by Banco do Brasil to facilitate integration with its financial solutions. Through the **sandbox**, it is possible to test and simulate operations before putting them into production.
+
+## About GoLang 🐹
+
+**GoLang**, also known as **Go**, is a programming language developed by Google. It is ideal for developing high-performance applications, especially web services and distributed systems.
+
+- **Simplicity**: Go is a minimalist language and easy to learn.
+- **Performance**: Being a compiled language, Go offers excellent performance, comparable to languages like C and C++.
+- **Concurrency**: Go has native support for concurrent programming, which is essential for scalable applications.
+
+For more information about **GoLang**, visit the official website: [https://golang.org/](https://golang.org/)
+
+## How to Run the Project Locally 🔧
+
+Follow the instructions below to run **API-PIX-GO** locally using Docker:
+
+1. Clone the repository:
+
+   ```bash
+   git clone https://github.com/gaitolini/API-PIX-GO.git
+   cd API-PIX-GO
+   ```
+2. Build the Docker image:
+
+ ```bash
+docker build -t api-pix-go .
+
+```
+3. Run the container:
+
+```bash
+docker run -d --name api-pix-go -p 8080:8080 api-pix-go
+```
+
+4. Access the API:
+```bash
+http://localhost:8080
+
+```
+
+## Contact 📬
+If you want to know more about this project or discuss future collaborations, feel free to contact me:
+
+- LinkedIn: [Anderson Gaitolini](https://www.linkedin.com/in/andersongaitolini/)
+- WhatsApp: [Entre em contato](https://youtu.be/IGP38bz-K48?si=62Khct2-dAFR3qn5)
+ 
+## License 📜
+This project is licensed under the terms of the MIT License. See the LICENSE file for more details.
+
+### 🚀 Made with lots of Go, Docker, and PIX by Anderson Gaitolini.
+
+### Thanks 🙌
+A big thank you to everyone who contributed to the development of this project and helped improve automation and continuous deployment! 🎉
+
+# Feel free to contribute, test, and suggest improvements! 😄
+  
+---
+### Pt-BR
+---
+# API-PIX-GO 🚀
 ## Middleware API PIX em GO 🐿️
 
 ---
@@ -73,10 +189,10 @@ Siga as instruções abaixo para rodar o **API-PIX-GO** localmente usando Docker
 
 1. Clone o repositório:
 
-   ```bash
-   git clone https://github.com/gaitolini/API-PIX-GO.git
-   cd API-PIX-GO
-   ```
+```bash
+git clone https://github.com/gaitolini/API-PIX-GO.git
+cd API-PIX-GO
+```
 
 ### Build da imagem Docker:
 
