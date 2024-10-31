@@ -217,6 +217,11 @@ Contato 📬
 - LinkedIn: [Anderson Gaitolini](https://www.linkedin.com/in/andersongaitolini/)
 - WhatsApp: [Entre em contato](https://wa.me/qr/CFND4RGOJHHUN1)
 
+<div align="center">
+  <img src="https://github.com/user-attachments/assets/a019d3e6-5a04-4124-b42b-b5824d1f92d5" alt="image" width="300"/>
+</div>
+
+
 ### Licença 📜
 Este projeto é licenciado sob os termos da MIT License. Veja o arquivo LICENSE para mais detalhes.
 
