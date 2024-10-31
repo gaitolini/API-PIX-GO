@@ -215,7 +215,7 @@ Contato 📬
 ## Se você quiser saber mais sobre este projeto ou discutir futuras colaborações, entre em contato comigo:
 
 - LinkedIn: [Anderson Gaitolini](https://www.linkedin.com/in/andersongaitolini/)
-- WhatsApp: [Entre em contato](https://youtu.be/IGP38bz-K48?si=62Khct2-dAFR3qn5)
+- WhatsApp: [Entre em contato](https://wa.me/qr/CFND4RGOJHHUN1)
 
 ### Licença 📜
 Este projeto é licenciado sob os termos da MIT License. Veja o arquivo LICENSE para mais detalhes.
